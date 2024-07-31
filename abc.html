@@ -5,30 +5,34 @@
   <title>プレゼント残り数</title>
   <style>
     body {
-      background-image: url('https://raw.githubusercontent.com/Tsukishima358358/ABC-/baca0bb703a5a261209d6fcd14f0'); /* 画像のURLを設定 */
+      background-image: url('https://raw.githubusercontent.com/Tsukishima358358/ABC-/baca0bb703a5a261209d6fcd14f0'); /*  */
       background-size: cover;
       background-position: center;
-      margin: 0;
-      height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      min-height: 100vh;
+      margin: 0;
     }
 
-    .container {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.8); /* 背景色を半透明の白にして内容を見やすく */
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    h1 {
+      margin: 20px;
+    }
+
+    p {
+      margin: 20px;
     }
 
     iframe {
-      display: block;
-      margin: 20px auto;
-      width: 100%;
-      max-width: 640px;
-      height: 800px;
+      border: 0;
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        width: 100vw;
+        height: calc(100vh * 2.5);
+      }
     }
   </style>
   <script>
@@ -46,10 +50,10 @@
   </script>
 </head>
 <body>
-  <div class="container">
-    <h1>プレゼント残り数</h1>
-    <p id="remainingSlots">残りのプレゼント数を取得中...</p>
-    <iframe src="https://forms.gle/1Ugw3AL5Tj3ccj1V6" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
-  </div>
+  <h1>プレゼント残り数</h1>
+  <p id="remainingSlots">残りのプレゼント数を取得中...</p>
+  
+  <!-- Googleフォームを埋め込みます -->
+  <iframe src="https://forms.gle/1Ugw3AL5Tj3ccj1V6" width="640" height="800" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
 </body>
 </html>
