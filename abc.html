@@ -36,7 +36,7 @@
   <script>
     async function fetchRemainingSlots() {
       try {
-        const response = await fetch('https://script.google.com/macros/s/AKfycbyZwW5fOCNQeEM5fEs41oIGnArTJtynCXBtH2TmoSq5ia6HRKmGu83rQhjYyOBk3VugYw/exec');
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzhLUFYCvSwFgncx7ESFLrI4COdczfbBrg97p9UfM1J5yZg2QcnkXX03zXsz_2mIpYt/exec');
         const remainingSlots = await response.text();
         document.getElementById('remainingSlots').innerText = `残り ${remainingSlots} 個のプレゼントがあります！`;
       } catch (error) {
